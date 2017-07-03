@@ -1,6 +1,6 @@
 # FROM node:boron
-# FROM node:8.1.2
-FROM alpine:3.5
+FROM node:8.1.2
+#FROM alpine:3.5
 
 # Create app directory
 RUN mkdir -p /usr/src/app
