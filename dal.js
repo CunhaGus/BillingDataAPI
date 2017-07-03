@@ -10,7 +10,8 @@ var dbConnection = sql.connect(dbConnectionString, (err) =>
                     if (err)
                     {
                         console.log("Error while connecting to the database :- " + err);
-                        res.send(err);
+                        //res.send(err);
+                        res.sendStatus(501).res(err);
                     }
                 });
 
