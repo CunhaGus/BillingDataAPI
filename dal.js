@@ -1,8 +1,9 @@
 const sql=require("mssql");               
 const csv=require('csvtojson');
 //const dbConfig=require('./config.billingdatabase.js');
+//const dbConnectionString = dbConfig
 
-const dbConnectionString = process.env.bilingdbconnectionstring //|| dbConfig
+const dbConnectionString = process.env.billingdbconnectionstring
 
 var dbConnection = sql.connect(dbConnectionString, (err) =>
                 {

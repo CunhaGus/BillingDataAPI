@@ -5,14 +5,10 @@
   "main": "server.js",
     "dependencies": {
         "express": "^4.14.0",
-        "body-parser": "^1.15.2",
-        "formidable": "^1.1.1",
-        "csv-parse": "^1.2.0",
+        "body-parser": "^1.15.2",       
         "csvtojson": "^1.1.7",
-        "fs": "0.0.1-security",
         "mssql":"^4.0.4",
-        "multer": "^1.3.0",
-        "readline": "^1.3.0"
+        "multer": "^1.3.0"
     },
     "scripts": {
     "start": "node server.js"
