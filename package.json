@@ -1,0 +1,24 @@
+{
+  "name": "BillingDatabaseAPI",
+  "version": "0.0.1",
+  "description": "This API allows communication with the Billing Database",
+  "main": "server.js",
+    "dependencies": {
+        "express": "^4.14.0",
+        "body-parser": "^1.15.2",
+        "formidable": "^1.1.1",
+        "csv-parse": "^1.2.0",
+        "csvtojson": "^1.1.7",
+        "fs": "0.0.1-security",
+        "mssql":"^4.0.4",
+        "multer": "^1.3.0",
+        "readline": "^1.3.0"
+    },
+    "scripts": {
+    "start": "node server.js"
+  },
+  "author": {
+    "name": "Gus Cunha",
+    "email": "lggc79@gmail.com"
+  }
+}
