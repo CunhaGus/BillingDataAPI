@@ -15,7 +15,12 @@ var dbConnection = sql.connect(dbConnectionString, (err) =>
                         //res.send(err);
                         res.sendStatus(501).send(err);
                     }
+                    else
+                    {
+                        console.log("Connected to the database successfully.");
+                    }
                 });
+
 
 ExecuteWithTransaction = (storedProcName, params, callBack) =>
 {
@@ -72,6 +77,11 @@ module.exports = {
 
     executeQuery : function(res, query){
 
+            if (!dbConnection)
+            {
+                console.log('Not connected to the database.')
+            }
+
             // create Request object
             var request = new sql.Request();
 
@@ -79,7 +89,7 @@ module.exports = {
             request.query(query, (err, rs) => {
                     if (err) {
                                 console.log("Error while querying database :- " + err);
-                                res.send(err);
+                                res.sendStatus(501).send(err);
                                 }
                     else {
                     res.send(rs.recordset);
@@ -107,7 +117,7 @@ module.exports = {
                 ExecuteWithTransaction('ImportPPSFile', parameters, (err, result) => {
                     if (err) {
                                 console.log("Error while importing PPS File :- " + err);
-                                res.send(err);
+                                res.sendStatus(501).send(err);
                                 }
                     else {
                         res.send(result);
@@ -123,7 +133,7 @@ module.exports = {
                 ExecuteWithTransaction('DeletePPSFile', parameters, (err, result) => {
                     if (err) {
                                 console.log("Error while deleting PPS File :- " + err);
-                                res.send(err);
+                                res.sendStatus(501).send(err);
                                 }
                     else {
                         res.send(result);

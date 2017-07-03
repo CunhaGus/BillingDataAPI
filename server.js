@@ -2,7 +2,7 @@
 const app = require("express")();
 const bodyParser = require("body-parser");
 const routes = require('./routes');
-const db=require('./dal.js');
+//const db=require('./dal.js');
 
 // Body Parser Middleware
 app.use(bodyParser.json()); 
