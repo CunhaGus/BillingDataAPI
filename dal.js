@@ -1,7 +1,8 @@
 const sql=require("mssql");               
 const csv=require('csvtojson');
-const dbConfig=require('./config.billingdatabase.js');
-const dbConnectionString = process.env.SQLAZURECONNSTR_billingdbconnectionstring || dbConfig
+//const dbConfig=require('./config.billingdatabase.js');
+//const dbConnectionString = process.env.SQLAZURECONNSTR_billingdbconnectionstring || dbConfig
+const dbConnectionString = process.env.SQLAZURECONNSTR_billingdbconnectionstring
 
 console.log(dbConnectionString);
 
