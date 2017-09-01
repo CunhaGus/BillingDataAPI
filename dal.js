@@ -1,9 +1,7 @@
 const sql=require("mssql");               
 const csv=require('csvtojson');
-//const dbConfig=require('./config.billingdatabase.js');
-//const dbConnectionString = dbConfig
-
-const dbConnectionString = process.env.billingdbconnectionstring
+const dbConfig=require('./config.billingdatabase.js');
+const dbConnectionString = process.env.SQLAZURECONNSTR_billingdbconnectionstring || dbConfig
 
 console.log(dbConnectionString);
 
@@ -89,6 +87,7 @@ module.exports = {
             request.query(query, (err, rs) => {
                     if (err) {
                                 console.log("Error while querying database :- " + err);
+                                //res.sendStatus(501).send(err);
                                 res.sendStatus(501).send(err);
                                 }
                     else {

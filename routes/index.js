@@ -7,6 +7,7 @@ const claimdate = require('./resource.claimdate.js');
 const ppsheader = require('./resource.ppsheader.js');
 const importPPSFile = require('./resource.importppsfile.js');
 const deletePPSFile = require('./resource.deleteppsfile.js');
+const ppsOther = require('./resource.ppsother.js');
 
 routes.use('/billingdataapi/invoicesubtype', invoicesubtype)
 routes.use('/billingdataapi/region', region)
@@ -14,5 +15,7 @@ routes.use('/billingdataapi/claimdate', claimdate)
 routes.use('/billingdataapi/ppsheader', ppsheader)
 routes.use('/billingdataapi/importppsfile', importPPSFile)
 routes.use('/billingdataapi/deleteppsfile', deletePPSFile)
+
+routes.use('/billingdataapi/ppsother', ppsOther)
 
 module.exports = routes;

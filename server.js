@@ -7,6 +7,12 @@ const routes = require('./routes');
 // Body Parser Middleware
 app.use(bodyParser.json()); 
 
+/*
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+*/
+
 //CORS Middleware - (Cross Origin Resource Sharing)
 app.use(function (req, res, next) {
     //Enabling CORS 
