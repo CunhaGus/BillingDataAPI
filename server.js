@@ -47,7 +47,7 @@ app.lislisten(process.env.PORT || 8080, () => {
 */
 
 //Setting up server
-var server = app.listen(process.env.PORT || 8080, function () {
+var server = app.listen(process.env.APPSETTING_PORT || 8080, function () {
     var port = server.address().port;
     console.log('BillingDataAPI now running on port', port);
 
